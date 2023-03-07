@@ -23,7 +23,6 @@ func main() {
 		fmt.Printf("%.2f°F = %.2fK\n", temp, fahrenheitToKelvin(temp))
 	case "K":
 		fmt.Printf("%.2fK = %.2f°C\n", temp, kelvinToCelsius(temp))
-		fmt.Printf("%.2fK = %.2f°F\n", temp, kelvinToFahrenheit(temp))
 	default:
 		fmt.Println("Invalid scale. Please enter C, F, or K.")
 	}
@@ -47,8 +46,4 @@ func fahrenheitToKelvin(fahrenheit float64) float64 {
 
 func kelvinToCelsius(kelvin float64) float64 {
 	return kelvin - 273.15
-}
-
-func kelvinToFahrenheit(kelvin float64) float64 {
-	return (kelvin * 9 / 5) - 459.67
 }
